@@ -29,7 +29,7 @@ We envision TechnoVate evolving into a comprehensive accessibility tool. Planned
 
 - **Text-to-Speech Integration:** Enabling users to listen to simplified text for better accessibility.
 - **Customization Options:** Allowing users to fine-tune text adjustments based on readability preferences.
-- **Multi-Language Support:** Expanding Simplifi to work across different languages for global accessibility.
+- **Multi-Language Support:** Expanding TechnoVate to work across different languages for global accessibility.
 
 ---
 
