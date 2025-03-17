@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechcoVate</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="TechcoVate.jpg" alt="TechcoVate" height="100" width="300">
+    </div>
+
+    <h1 class="dm-sans-paragraph">🚀 Welcome to TechcoVate!</h1>
+    <p class="dm-sans-paragraph">
+        <b>Innovate. Transform. Elevate.</b><br>
+        TechcoVate is your go-to platform for the latest in AI, automation, and emerging tech trends. 
+        Stay ahead of the curve and simplify your digital world with our expert insights and solutions.
+    </p>
+
+    <!-- About Section -->
+    <section>
+        <h2 class="dm-sans-paragraph">💡 About Us</h2>
+        <p class="dm-sans-paragraph">
+            At TechcoVate, we believe in the power of technology to drive change. Our mission is to provide 
+            cutting-edge solutions that empower businesses and individuals. Whether it’s AI-driven automation, 
+            cybersecurity insights, or digital transformation strategies, we’ve got you covered.
+        </p>
+    </section>
+    
+
+    <!-- Question Input -->
+    <label for="typeQ" class="dm-sans-paragraph">Any Questions?</label>
+    <input type="text" id="typeQ" name="typeQ" placeholder="Enter your question..." maxlength="100">
+    <button id="copyText" class="dm-sans-paragraph" title="Copy to clipboard">📋</button>
+    
+    <br><br>
+
+    <!-- Submit Button -->
+    <button id="openPopup" class="dm-sans-paragraph">Submit</button>
+
+    <!-- Popup & Overlay -->
+    <div id="overlay"></div>
+    <div id="popup" class="popup">
+        <span id="closePopup" class="close-button">&times;</span>
+        <p class="dm-sans-paragraph">Thank you! Your input has been submitted.</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
+    <script src="contentScript.js"></script>
+</body>
+</html>

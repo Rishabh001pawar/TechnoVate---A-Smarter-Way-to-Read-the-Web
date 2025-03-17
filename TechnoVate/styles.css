@@ -1,0 +1,292 @@
+/* ☀️ Light Theme Global Styles */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: "DM Sans", sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* 🎨 Typography */
+.dm-sans-paragraph {
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 18px;
+}
+
+b {
+    font-weight: 700;
+}
+
+/* 📦 Container */
+.container {
+    padding: 20px;
+}
+
+img {
+    filter: drop-shadow(0px 4px 10px rgba(0, 122, 255, 0.3));
+}
+
+/* 🌞 Light Mode Toggle */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider-toggle {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider-toggle:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-toggle {
+    background-color: #007AFF;
+}
+
+input:checked + .slider-toggle:before {
+    transform: translateX(28px);
+}
+
+/* 🎚️ Slider Section */
+.slidecontainer {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 🎛️ Slider */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 14px;
+    border-radius: 7px;
+    background-color: #ddd;
+    outline: none;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    background: #007AFF;
+    border: 3px solid white;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.slider::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    background: #007AFF;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* 🔘 Buttons */
+button {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 10px;
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 122, 255, 0.3);
+}
+
+button:hover {
+    background: #005ecb;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 122, 255, 0.4);
+}
+
+/* Reset Button */
+#resetSlider {
+    background: #888;
+}
+
+#resetSlider:hover {
+    background: #666;
+}
+
+/* ✍️ Input Fields */
+input[type="text"] {
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff;
+    color: #333;
+    border: 2px solid #007AFF;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #00AFFF;
+}
+
+/* 📋 Copy Button */
+#copyText {
+    font-size: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#copyText:hover {
+    transform: scale(1.3);
+}
+
+/* 🖼️ Popup */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    z-index: 10;
+    width: 90%;
+    max-width: 320px;
+    text-align: center;
+    border: 3px solid #007AFF;
+    color: #333;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup.active {
+    display: block;
+}
+
+/* ❌ Close Button */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    color: #666;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #007AFF;
+}
+
+/* 🔲 Overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+#overlay.active {
+    display: block;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 600px) {
+    .slider {
+        height: 10px;
+    }
+
+    .slider::-webkit-slider-thumb,
+    .slider::-moz-range-thumb {
+        width: 22px;
+        height: 22px;
+    }
+
+    .popup {
+        width: 90%;
+        max-width: 280px;
+    }
+
+    button {
+        max-width: 180px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
