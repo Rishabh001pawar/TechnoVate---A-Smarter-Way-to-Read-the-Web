@@ -1,6 +1,6 @@
 # TechnoVate - A Smarter Way to Read the Web
 
-TechnoVate is a Chrome extension designed to enhance online readability by simplifying text on web pages according to user preferences. It offers four modes: **Current (original text), Simple, Simpler, and Simplest**, allowing users to choose the level of simplification they prefer. Additionally, the extension features an AI-powered chatbot that helps users understand content by answering questions about the page.
+TechnoVate is a Chrome extension designed to enhance online readability by simplifying text on web pages according to user preferences.Additionally, the extension features an AI-powered chatbot that helps users understand content by answering questions about the page.
 
 ---
 
